@@ -1,0 +1,17 @@
+name: Salesforce CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate-environment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repository
+        run: |
+          pwd
+          ls -la
